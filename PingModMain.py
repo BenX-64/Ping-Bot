@@ -25,7 +25,12 @@ async def on_message(ctx):
 @has_permissions(administrator = True)
 async def config(ctx, setting, level):
     await ctx.reply('Changing hostility level from' )
+    return
 
-
+@bot.event
+async def on_message(ctx, user:discord.Member = None):
+    await bot.process_commands(ctx)
+    if bot.user == ctx.author: return
+    print("t")
 
 bot.run(os.getenv('TOKEN'))

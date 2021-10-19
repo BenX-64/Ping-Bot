@@ -14,29 +14,38 @@ class serverconfig{
 
     int tolerance = 5;
     int bantime = 3;
-    public:
+    
 
-    bool checkUser(std::string s){
+    public: bool findUser(std::string id){
         //return members.find(s);
-        return false;
+        return !(members.find(id)==members.end());
     }
-    void addUser(std::string s){
-        userInfo* a = new userInfo();
-        members[s] = a;
+    public: void addUser(std::string id){
+        userInfo* a = new userInfo(id);
+        members[id] = a;
     }
-    void removeUser(std::string s){
-        delete(members[s]);
-        members.erase(s);
+    public: void removeUser(std::string id){
+        delete(members[id]);
+        members.erase(id);
     }
 
 
 };
 class userInfo{
     std::string id;
-    std::list <offenses> incidents;
-    public:
+    std::list <offense> incidents;
+    public: userInfo (std::string id){
+        this -> id = id;
+    }
+    public: void addOffense(){
+        
+    }
+
 };
-class offenses{
-    public:
+class offense{
+
+    public: offense(){
+
+    }
 
 };
