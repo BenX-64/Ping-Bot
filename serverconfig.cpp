@@ -33,7 +33,7 @@ class serverconfig{
 };
 class userInfo{
     std::string id;
-    
+    std::list <offenses> incidents;
     public:
 };
 class offenses{
