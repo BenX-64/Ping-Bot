@@ -1,9 +1,0 @@
-keeps track of each user's ping 
-offenses, up to tolerance count.
-At tolerance, it mutes user for 3 days
-exempts admins
-
-Server config
-keeps track of server roles and suggests pinging those
-based on channel. 
-
